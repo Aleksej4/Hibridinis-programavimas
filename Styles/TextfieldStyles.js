@@ -9,14 +9,23 @@ export const textfieldStyles = StyleSheet.create ({
     },
 
     box: {
-        width: 135,
-        height: 50,
+        width: 130,
+        height: 45,
         borderColor: '#D3D3D3',
-        borderWidth: 3,
+        borderWidth: 4,
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 10
     },
 
     text: {
-        color: '#FFF'
+        color: '#000000',
+        fontWeight: 'bold',
+        fontSize: 16
     },
+
+    boxRow: {
+        flexDirection: 'column',
+    }
 
 })

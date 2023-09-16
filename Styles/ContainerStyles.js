@@ -16,7 +16,9 @@ export const containerStyles = StyleSheet.create({
 
     pink: {
       flex: 1,
-      backgroundColor: '#FFC0CB'
+      backgroundColor: '#FFC0CB',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
 });
   
