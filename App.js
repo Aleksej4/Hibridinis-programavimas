@@ -45,7 +45,7 @@ export default function App() {
       <View style={containerStyles.pink}>
 
         <View style={textfieldStyles.box}>
-        <Text style={textfieldStyles.text}>Text1</Text>
+        <Text style={textfieldStyles.text}>Text11111111111111</Text>
         </View>
 
       </View>
