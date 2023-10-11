@@ -13,9 +13,27 @@ export const customButtonStyle = StyleSheet.create({
         margin: 10,
     },
 
-    buttonText: {
-        color: '#000000',
-        fontWeight: 'bold',
-        fontSize: 16
+    driverButtonStyle: {
+        width: 350,
+        height: 150,
+        margin: 5,
+        borderRadius: 15,
+        borderWidth: 3,
+        borderColor: "#000000",
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    sortButtonStyle: {
+        width: 25,
+        height: 25,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 3,
+        borderColor: '#000000',
+        borderRadius: 15,
+        backgroundColor: '#FFFFFF',
+        margin: 10,
     }
+    
 })
