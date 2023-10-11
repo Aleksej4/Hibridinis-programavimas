@@ -7,5 +7,11 @@ export const buttonStyles = StyleSheet.create({
         backgroundColor: "#FFFFFF",
         alignItems: 'center',
         justifyContent: 'center'
+    },
+
+    driverButtonStyle: {
+        width: 300,
+        height: 150,
+        
     }
 })
