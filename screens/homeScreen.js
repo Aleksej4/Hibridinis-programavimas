@@ -12,8 +12,6 @@ export const HomeScreen = ({navigation}) =>{
     <View style={containersStyles.mainContainer}>
         <CustomButton text = "Street lyga" onPress = {() => {navigation.navigate('ParticipantsScreen', {leagueTitle: "STREET", jsonData : streetLeague})}}/>
         <CustomButton text= "Semi PRO lyga" onPress={() => {navigation.navigate('ParticipantsScreen', {leagueTitle: "SEMI PRO", jsonData : semiLeague})}}/>
-        <SortButton/>
-
     </View>
     );
 };

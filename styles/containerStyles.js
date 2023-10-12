@@ -7,17 +7,18 @@ export const containersStyles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+
     mainButtonsContainer: {
       flexDirection: "column",
       alignItems: 'center',
       justifyContent: 'center',
       margin: 10
     },
+
     participantListContainer: {
       flex: 1,
       flexDirection: "column",
       alignItems: 'center',
-      justifyContent: 'flex-start',
       marginTop: 10,
     },
 
@@ -38,4 +39,33 @@ export const containersStyles = StyleSheet.create({
       justifyContent: 'center',
       flexDirection: 'column',
     },
+
+    rowContainer: {
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      flexDirection: 'row'
+    },
+
+    columnContainer: {
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      flexDirection: 'column'
+    },
+
+    driverDataMainContainer: {
+      flex: 1,
+      alignItems: 'center',
+      backgroundColor: '#FFFFFF'
+    },
+
+    raceInfoContainer: {
+      width: 350,
+      height: 200,
+      margin: 5,
+      borderRadius: 15,
+      borderWidth: 3,
+      borderColor: "#000000",
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+    }
   });

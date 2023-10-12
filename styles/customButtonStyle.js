@@ -34,6 +34,5 @@ export const customButtonStyle = StyleSheet.create({
         borderRadius: 15,
         backgroundColor: '#FFFFFF',
         margin: 10,
-    }
-    
+    },
 })

@@ -1,27 +1,9 @@
-import React from 'react';
-import { View, Text, TouchableHighlight } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, ScrollView } from 'react-native';
 import { containersStyles } from '../styles/containerStyles';
-import { customButtonStyle } from '../styles/customButtonStyle';
+import { Driver } from '../components/driverButton';
 import { textStyles } from '../styles/textStyles';
-
-const Driver = ({ driver, navigation, getDriverPoints }) => {
-    return (
-        <TouchableHighlight underlayColor="#EEEEEE" style={customButtonStyle.driverButtonStyle} onPress={() => {}}>
-            <View style={containersStyles.driverButtonContainer}>
-                <View style={containersStyles.driverDataContainer}>
-                    <Text style={textStyles.buttonText}>{driver.firstname}</Text>
-                    <Text style={textStyles.buttonText}>{driver.lastname}</Text>
-                </View>
-
-                <View style={containersStyles.driverDataContainer}>
-                    <Text style={textStyles.buttonText}>{driver.car}</Text>
-                    <Text></Text>
-                    <Text style={textStyles.buttonText}>Score: {getDriverPoints(driver)}</Text>
-                </View>
-            </View>
-        </TouchableHighlight>
-    );
-}
+import { SortButton } from '../components/sortButton';
 
 export const ParticipantsScreen = ({ route, navigation }) => {
     const leagueData = route.params.jsonData;
@@ -52,20 +34,38 @@ export const ParticipantsScreen = ({ route, navigation }) => {
         }
     }
 
+    const setSort = (league) => {
+        if(sortByName){
+            sortDriversByPoints(league);
+        }else{
+            sortDriversByName(league)
+        }
+    }
+
+    const [sortByName, setSortState] = useState(false)
+
     return (
-        <View style={containersStyles.mainContainer}>
-            {leagueData.map((league) => {
-                sortDriversByPoints(league);
-                return (
-                    <View style={containersStyles.participantListContainer} key={league.league_id}>
-                        {league.drivers.map((driver) => (
-                            <View key={driver.driver_id}>
-                                <Driver driver={driver} navigation={navigation} getDriverPoints={getDriverPoints} />
+        <ScrollView>
+            <View style={containersStyles.mainContainer}>
+                {leagueData.map((league) => {
+                    setSort(league)
+                    return (
+                        <View style={containersStyles.participantListContainer} key={league.league_id}>
+                            <View style={containersStyles.rowContainer}>
+                                <Text style={textStyles.buttonText}>Sort by: </Text>
+                                <SortButton text="Points" onPress={() => setSortState(true)} color={sortByName ? '#ADD8E6' : '#FFFFFF'}/>
+                                <SortButton text="Full name" onPress={() => setSortState(false)} color={!sortByName ? '#ADD8E6' : '#FFFFFF'}/>
                             </View>
-                        ))}
-                    </View>
-                );
-            })}
-        </View>
+                            {league.drivers.map((driver) => (
+                                <View key={driver.driver_id}>
+                                    <Driver driver={driver} navigation={navigation} getDriverPoints={getDriverPoints} />
+                                </View>
+                            ))}
+                        </View>
+                    );
+                })}
+            </View>
+        </ScrollView>
     );
+
 };
