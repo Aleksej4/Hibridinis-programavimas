@@ -1,0 +1,73 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "year": 1994,
+        "make": "BMW",
+        "model": "325",
+        "mileage": 188000,
+        "description": "Kuriasi nevaziuoja, bet traukdavo keip zveris. Varyklis gal gyvas, gal ne. Kaina nederinama",
+        "seller": {
+          "name": "Algis Zidrunas",
+          "contact": "+37071851823"
+        },
+        "price": 1400,
+        "engine": {
+          "type": "4-cylinder",
+          "displacement": "2.5L",
+          "powerKw": 141
+        },
+        "photos": [
+          "http://farm3.static.flickr.com/2722/4358105911_fbba028ca1_b.jpg",
+          "http://farm5.static.flickr.com/4017/4358851606_2c4cfc84cd_b.jpg",
+          "http://farm3.static.flickr.com/2801/4358107263_8634213350_b.jpg"
+        ]
+      },
+      {
+        "id": 2,
+        "year": 2001,
+        "make": "Honda",
+        "model": "Legend",
+        "mileage": 276000,
+        "description": "Auto pilnai vaziuojantis. Variklis ir pavaru deze tvarkoj",
+        "seller": {
+          "name": "Antanas Zaliauskas",
+          "contact": "+37016496827"
+        },
+        "price": 1950,
+        "engine": {
+          "type": "V6",
+          "displacement": "3.5L",
+          "powerKw": 154
+        },
+        "photos": [
+          "https://www.cars-directory.net/pics/honda/legend/2001/honda_legend_a1239171052b2603462.jpg",
+          "https://www.cars-directory.net/pics/honda/legend/2001/honda_legend_a1239171052b2603462_2.jpg",
+          "https://www.cars-directory.net/pics/honda/legend/2001/honda_legend_a1239171052b2603462_5.jpg"
+
+        ]
+      },
+      {
+        "id": 3,
+        "year": 2007,
+        "make": "Lexus",
+        "model": "LS 460",
+        "mileage": 420000,
+        "description": "President komplektacija auto. Minusai: suskerdijosi liuko apsaugine guma, po kapotu suluzusi apdailos detale",
+        "seller": {
+          "name": "Markas Lapinskis",
+          "contact": "+37083562194"
+        },
+        "price": 8400,
+        "engine": {
+          "type": "V8",
+          "displacement": "4.6L",
+          "powerKw": 280
+        },
+        "photos": [
+          "https://file.kelleybluebookimages.com/kbb/base/house/2007/2007-Lexus-LS-FrontSide_LELS460071_505x375.jpg?interpolation=high-quality&downsize=600:*"
+        ]
+      }
+    ]
+  }
+  
